@@ -34,12 +34,12 @@ body {
   /*background: color image repeat position/size */
   /*O código feito acima é para ser um atalho, resumindo e melhorando a legibilidade do código.*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
-
 
 #container {
   width: 100%;
@@ -48,7 +48,6 @@ body * {
 
   padding: 0 24px;
 }
-
 
 /* Profile Infos */
 #profile {
@@ -65,7 +64,6 @@ body * {
   font-weight: 500;
   line-height: 24px;
 }
-
 
 /* Switch - Botão de Modo (Normal / Noturno)*/
 #switch {
@@ -87,7 +85,7 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 }
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial;
 }
@@ -101,7 +99,6 @@ body * {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
-
 
 /* Links */
 ul {
@@ -138,7 +135,6 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
-
 /* Social Links */
 #social-links {
   display: flex;
@@ -167,4 +163,13 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
